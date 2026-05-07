@@ -100,7 +100,7 @@ def run_job(input_directory, output_directory):
     create_marker(output_directory)
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
 
     run_job(
         "files/input",
