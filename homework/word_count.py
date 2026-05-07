@@ -2,6 +2,7 @@
 
 import glob
 import os
+import shutil
 
 import pandas as pd  # type: ignore
 
@@ -65,7 +66,7 @@ def save_output(dataframe, output_directory):
         files = glob.glob(f"{output_directory}/*")
         for file in files:
             os.remove(file)
-        os.rmdir(output_directory)
+        shutil.rmtree(output_directory)
 
     os.makedirs(output_directory)
 
